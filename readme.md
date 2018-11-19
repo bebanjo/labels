@@ -2,7 +2,7 @@
 
 Generates a PDF document from a CSV file to print sticker labels.
 
-<img src="image.png" width="600px">
+<a href="sample.pdf"><img src="image.png" width="600px"></a>
 
 It is, surprisingly, a very tricky/annoying thing to do. There is software out there for doing this, but you have to pay yearly plans just to generate a few pages. Sometimes they do not have the type of stickers you need, or the correct number of rows or columns. Furthermore, after all of that, some printers do not handle margins correctly or lie about it.
 
