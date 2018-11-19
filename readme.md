@@ -21,3 +21,12 @@ This simple script takes a CSV file and uses [PrawnPDF](http://prawnpdf.org). Th
 4. Run `bin/build` to generate the PDF
 
 5. If you run into layout problems there is a `debug` flag
+
+### Tips for printing
+
+- Page default is `A4`, but with any pages size always print `borderless`
+
+- Always scale to `100%` so each sticker gets correctly aligned to its spot
+
+- Measure page size, margins and gutters and tweak parameters inside `bin/build`
+
