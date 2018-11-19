@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "csv"
+require "prawn"
+require "prawn/measurement_extensions"
+
+# Page settings
+
+page_height    = 297.mm
+page_width     = 210.mm
+margin_top     = 6.mm
+margin_right   = 8.mm
+margin_bottom  = 6.mm
+margin_left    = 8.mm
+
+number_of_rows = 8
+number_of_cols = 3
+gutter_column  = 6.mm
+gutter_row     = 4.mm
+
+font_family    = "IBM Plex Sans"
+font_size      = 10
+
+output_file    = "sample.pdf"
+debug_mode     = false
+
+# Helper
+
+def self.mm; send(:mm); end
+
+# Load CSV file, format: name, address1, address2
+
+file  = File.new('data.csv', 'r')
+data  = CSV.parse(file)
+
+# Generates the PDF file
+
+Prawn::Document.generate(
+    output_file,
+    page_size:     [page_width, page_height],
+    top_margin:    margin_top,
+    right_margin:  margin_right,
+    bottom_margin: margin_bottom,
+    left_margin:   margin_left
+  ) do
+
+  font_families.update("IBM Plex Sans" => {
+    :normal => "fonts/IBMPlexSans-Regular.ttf",
+    :bold   => "fonts/IBMPlexSans-Medium.ttf"
+  })
+  font(font_family)
+
+  define_grid(
+    columns:       number_of_cols, 
+    rows:          number_of_rows, 
+    column_gutter: gutter_column, 
+    row_gutter:    gutter_row
+  )
+
+  count = data.size
+  while count > 0 do
+    grid.show_all if debug_mode
+    number_of_rows.times.each_with_index do |i|
+      number_of_cols.times.each_with_index do |j|
+        grid(i,j).bounding_box do
+          if count <= 0; break; end
+          count = count-1
+          text data[count][0], :style => :bold,   :size => font_size
+          text data[count][1], :style => :normal, :size => font_size
+          text data[count][2], :style => :normal, :size => font_size
+          text count.to_s,     :style => :normal, :size => font_size if debug_mode
+        end
+      end
+    end
+    start_new_page if count > 0
+  end
+end
