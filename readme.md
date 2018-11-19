@@ -24,7 +24,7 @@ This simple script takes a CSV file and uses [PrawnPDF](http://prawnpdf.org). Th
 
 ### Tips for printing
 
-- Page default is `A4`, but with any pages size always print `borderless`
+- Page default is `A4`, but always choose `A4 borderless` when printing
 
 - Always scale to `100%` so each sticker gets correctly aligned to its spot
 
