@@ -8,7 +8,7 @@ It is, surprisingly, a very tricky/annoying thing to do. There is software out t
 
 This simple script takes a CSV file and uses [PrawnPDF](http://prawnpdf.org). This allows you to set all those parameters manually to get them right. With a little bit of trial and error the correct PDF document is ready for printing.
 
-[🖨 Take a loot to this PDF sample](sample.pdf)
+[🖨 Take a look to the PDF sample](sample.pdf)
 
 ### How to use
 
