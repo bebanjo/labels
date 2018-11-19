@@ -29,4 +29,3 @@ This simple script takes a CSV file and uses [PrawnPDF](http://prawnpdf.org). Th
 - Always scale to `100%` so each sticker gets correctly aligned to its spot
 
 - Measure page size, margins and gutters and tweak parameters inside `bin/build`
-
