@@ -6,7 +6,7 @@ Generates a PDF document from a CSV file to print sticker labels.
 
 It is, surprisingly, a very tricky/annoying thing to do. There is software out there for doing this, but you have to pay yearly plans just to generate a few pages. Sometimes they do not have the type of stickers you need, or the correct number of rows or columns. Furthermore, after all of that, some printers do not handle margins correctly or lie about it.
 
-This simple script takes a CSV file and uses [PrawnPDF](http://prawnpdf.org). This allows you to set all those parameters manually to get them right. With a little bit of trial and error the correct PDF document is ready for printing.
+This simple script takes a CSV file and uses [Prawn](http://prawnpdf.org). This allows you to set all those parameters manually to get them right. With a little bit of trial and error the correct PDF document is ready for printing.
 
 [🖨 Take a look to the PDF sample](sample.pdf)
 
