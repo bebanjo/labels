@@ -9,15 +9,15 @@ require "prawn/measurement_extensions"
 
 page_height    = 297.mm
 page_width     = 210.mm
-margin_top     = 6.mm
-margin_right   = 8.mm
-margin_bottom  = 6.mm
-margin_left    = 8.mm
+margin_top     = 12.mm
+margin_right   = 7.mm
+margin_bottom  = 12.mm
+margin_left    = 7.mm
 
 number_of_rows = 8
 number_of_cols = 3
-gutter_column  = 6.mm
-gutter_row     = 4.mm
+gutter_column  = 7.mm
+gutter_row     = 7.mm
 
 font_family    = "IBM Plex Sans"
 font_size      = 10
@@ -32,7 +32,7 @@ def self.mm; send(:mm); end
 # Load CSV file, format: name, address1, address2
 
 file  = File.new('data.csv', 'r')
-data  = CSV.parse(file)
+data  = CSV.parse(file).reverse
 
 # Generates the PDF file
 
