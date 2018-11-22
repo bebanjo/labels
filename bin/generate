@@ -47,9 +47,10 @@ Prawn::Document.generate(
 
   font_families.update("IBM Plex Sans" => {
     :normal => "fonts/IBMPlexSans-Regular.ttf",
+    :italic => "fonts/IBMPlexSans-Italic.ttf",
     :bold   => "fonts/IBMPlexSans-Medium.ttf"
   })
-  font(font_family)
+  font(font_family, :size => font_size)
 
   define_grid(
     columns:       number_of_cols, 
@@ -66,10 +67,13 @@ Prawn::Document.generate(
         grid(i,j).bounding_box do
           if count <= 0; break; end
           count = count-1
-          text data[count][0], :style => :bold,   :size => font_size
-          text data[count][1], :style => :normal, :size => font_size
-          text data[count][2], :style => :normal, :size => font_size
-          text count.to_s,     :style => :normal, :size => font_size if debug_mode
+          name, company, address1, address2, country = data[count]
+          text name,           :style => :bold   if name
+          text company,        :style => :italic if company
+          text address1,       :style => :normal if address1
+          text address2,       :style => :normal if address2
+          text country.upcase, :style => :normal if country
+          text count.to_s,     :style => :normal if debug_mode
         end
       end
     end

@@ -14,7 +14,7 @@ This simple script takes a CSV file and uses [Prawn](http://prawnpdf.org). This 
 
 1. Install gems with `bundle install`
 
-2. Drop CSV data inside `data.csv`. Format: `Name, Address Line 1, Address Line 2`
+2. Drop CSV data inside `data.csv`. Format: `Name, Company, Address line 1, Address line 2, Country`
 
 3. Tweak params inside the `bin/generate` file to match your paper/printer
 
