@@ -18,7 +18,7 @@ This simple script takes a CSV file and uses [Prawn](http://prawnpdf.org). This 
 
 3. Tweak params inside the `bin/generate` file to match your paper/printer
 
-4. Run `bin/build` to generate the PDF
+4. Run `bin/generate` to generate the PDF
 
 ### Tips for printing
 
@@ -26,6 +26,6 @@ This simple script takes a CSV file and uses [Prawn](http://prawnpdf.org). This 
 
 - Always scale to `100%` so each sticker gets correctly aligned to its spot
 
-- Measure page size, margins and gutters and tweak parameters inside `bin/build`
+- Measure page size, margins and gutters and tweak parameters inside `bin/generate`
 
 - If you run into layout problems there is a `debug` flag
