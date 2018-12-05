@@ -28,4 +28,4 @@ This simple script takes a CSV file and uses [Prawn](http://prawnpdf.org). This 
 
 - Measure page size, margins and gutters and tweak parameters inside `bin/generate`
 
-- If you run into layout problems there is a `debug` flag
+- If you run into layout problems there is a `debug` flag available.
